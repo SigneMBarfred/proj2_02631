@@ -37,4 +37,4 @@ def plot_grade_distribution(grades_matrix):
 
 
 
-#plot_grade_distribution(grades)
+plot_grade_distribution(grades)
