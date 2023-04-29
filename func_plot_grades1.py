@@ -24,10 +24,10 @@ def plot_grade_distribution(grades_matrix):
     ax.bar(possible_grades, y)
 
     # Sætter titel, scalering på x-aksen
-    ax.set_xlabel('Karakter')
+    ax.set_xlabel('Grades')
     ax.set_xticks(possible_grades)
-    ax.set_ylabel('Antal studerne')
-    ax.set_title('Karakter fordeling')
+    ax.set_ylabel('Numbers of students')
+    ax.set_title('Final grades')
 
     # show the plot
     plt.show()
