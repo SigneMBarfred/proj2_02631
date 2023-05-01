@@ -11,32 +11,25 @@ for: project 2 - grades in 02631 F23
 ##
 
 import numpy as np
-#TESTRELEVANT GENERERING AF MATRIX - slettes når programmet er klar
-M = int(input("Please input number of columns in the matrix you want to generate:    "))
-N = int(input("Please input number of rows:    "))
-grades = np.random.uniform(-3,12,(N,M))
-#SLUT PÅ KODE TIL RANDOM KARAKTER
-
-#grades = np.array([[11,2,3,6,7],[2,3,4,6,1]]) ## test af midt-intervalværdier
 
 def roundGrade(grades):
     gradeScale = np.array([-3,0,2,4,7,10,12]) #definerer 7-trinsskalaen
     gradeRounded = []
-    
+    grades = grades.astype(float)
     for student in grades:
         
         # ordne midtinterval oprundinger manuelt ved at gå ind og erstatte med værdien højere
         for i in range(len(student)):
           
-            # replace mid interval with upper
+            # udskifte midtinterval med øvre grænse
             if student[i] == 1:
                 student[i] = 2
           
-            # replace 3 w 4
+            # udskifte midt m øvre
             if student[i] == 3:
                 student[i] = 4
             
-            # replace 11 w 12
+            # udskifte mid med øvre
             if student[i] == 11:
                 student[i] =12
         
@@ -45,7 +38,3 @@ def roundGrade(grades):
         gradeRounded.append(grade) #saml i afrundet liste
 
     return gradeRounded
-
-print(roundGrade(grades))
-
-#roundGrade(grades)
